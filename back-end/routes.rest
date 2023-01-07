@@ -1,0 +1,41 @@
+GET http://localhost:5000/public
+
+###
+POST  http://localhost:5000/public
+
+###
+PATCH  http://localhost:5000/public/15
+
+###
+DELETE   http://localhost:5000/public/12
+
+###
+
+POST http://localhost:5000/auth/login 
+Content-Type: application/json
+
+{
+"username": "bondhon"
+}
+
+### 
+GET http://localhost:5000/auth/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9uZGhvbiIsImlhdCI6MTY3Mjc2ODEzNSwiZXhwIjoxNjcyNzY4MTk1fQ.3elMXE6s7-1KyDfMOccZHS7zmQD8izmZSEiB3SnQfjs
+
+###
+DELETE http://localhost:5000/auth/logout 
+Content-Type: application/json
+
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9uZGhvbiIsImlhdCI6MTY3MjMxMzUxMX0.3slgnEdrC0oCYoGhG21zlY-vBnUd-1bUvhfhPfnGHUo"
+}
+
+###
+
+POST http://localhost:5000/auth/token 
+Content-Type: application/json
+
+{
+"token":
+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9uZGhvbiIsImlhdCI6MTY3MjMxMzU5NH0.aGA5iYr6QiB9S5QN0xkD2bu64aO3FaNV0gW3xDH8wwU"
+}
