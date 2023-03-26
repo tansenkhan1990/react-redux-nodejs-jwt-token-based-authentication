@@ -52,3 +52,11 @@ Routes are protected with a seperate middleware function.
 # Frontend part
 
 Develop a seperate class named Api which contains axios configuration for handling public and private route with localStorage.getItem("jwt") and all kinds of request such as get and post etc.
+
+# Build the Docker image
+
+docker build -t full-stack-jwt-token .
+
+# Run the Docker container
+
+docker run -p 3000:3000 full-stack-jwt-token
