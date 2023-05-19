@@ -10,8 +10,8 @@ services:
       - ./backend:/app
     environment:
       - DATABASE_CONNECTION_URL=mongodb+srv://tansen:tansen123@cluster0.5vtwswo.mongodb.net/birtday?retryWrites=true&w=majority
-    depends_on:
-      - mongo
+    # depends_on:
+    #   - mongo
 
   frontend:
     build:
@@ -22,12 +22,12 @@ services:
     volumes:
       - ./frontend:/app
 
-  mongo:
-    image: mongo:latest
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb-data:/data/db
+  # mongo:
+  #   image: mongo:latest
+  #   ports:
+  #     - 27017:27017
+  # volumes:
+  #   - mongodb-data:/data/db
 
 volumes:
   mongodb-data:
