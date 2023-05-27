@@ -127,8 +127,8 @@ const App: React.FC = () => {
     <Container>
       <header className="header">
         <h1 className="text-center header-text">
-          Welcome to Birthday checker
-          </h1>
+          Welcome to Birthday checker test
+        </h1>
       </header>
       <Container>
         <main>

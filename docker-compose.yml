@@ -7,27 +7,15 @@ services:
     ports:
       - 3333:3333
     volumes:
-      - ./backend:/app
+      - ./back-end:/app
     environment:
       - DATABASE_CONNECTION_URL=mongodb+srv://tansen:tansen123@cluster0.5vtwswo.mongodb.net/birtday?retryWrites=true&w=majority
-    # depends_on:
-    #   - mongo
 
-  frontend:
+  fontend:
     build:
       context: ./fontend
       dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - ./frontend:/app
-
-  # mongo:
-  #   image: mongo:latest
-  #   ports:
-  #     - 27017:27017
-  # volumes:
-  #   - mongodb-data:/data/db
-
-volumes:
-  mongodb-data:
+      - ./fontend:/app
