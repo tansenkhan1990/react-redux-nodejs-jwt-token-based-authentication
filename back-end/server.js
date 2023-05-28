@@ -26,7 +26,7 @@ app.use('/date', require('./routes/date'));
 app.use('/records', require('./routes/records'));
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}.`)
+  console.log(`Server is running on port test ${port}.`)
 })
 
 
